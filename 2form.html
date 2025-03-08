@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario - Arte Marcial Favorito</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            width: 350px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #00d4a6;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .radio-group {
+            margin-top: 5px;
+        }
+
+        .radio-group label {
+            font-weight: normal;
+            display: block;
+        }
+
+        button {
+            background-color: #00d48d;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #00a878;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="procesar.php" method="POST">
+        <h2>¿Cuál es tu arte marcial favorito?</h2>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label>Selecciona tu arte marcial favorito:</label>
+        <div class="radio-group">
+            <label><input type="radio" name="arte_marcial" value="Karate" required> Karate</label>
+            <label><input type="radio" name="arte_marcial" value="Taekwondo"> Taekwondo</label>
+            <label><input type="radio" name="arte_marcial" value="Judo"> Judo</label>
+            <label><input type="radio" name="arte_marcial" value="Kung Fu"> Kung Fu</label>
+            <label><input type="radio" name="arte_marcial" value="Jiu-Jitsu"> Jiu-Jitsu</label>
+            <label><input type="radio" name="arte_marcial" value="MMA"> MMA</label>
+            <label><input type="radio" name="arte_marcial" value="Otro"> Otro</label>
+        </div>
+
+        <button type="submit">Enviar Respuesta</button>
+        <a href="index.html">👉🏽REGRESAR👈🏽</a>
+            
+    </form>
+</body>
+</html>
